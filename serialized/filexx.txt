@@ -1,1 +1,20 @@
-test Dienstag
+Background
+PyPI does not display download statistics for a number of reasons: [1]
+
+Inefficient to make work with a Content Distribution Network (CDN): Download statistics change constantly. Including them in project pages, which are heavily cached, would require invalidating the cache more often, and reduce the overall effectiveness of the cache.
+
+Highly inaccurate: A number of things prevent the download counts from being accurate, some of which include:
+
+pip’s download cache (lowers download counts)
+
+Internal or unofficial mirrors (can both raise or lower download counts)
+
+Packages not hosted on PyPI (for comparisons sake)
+
+Unofficial scripts or attempts at download count inflation (raises download counts)
+
+Known historical data quality issues (lowers download counts)
+
+Not particularly useful: Just because a project has been downloaded a lot doesn’t mean it’s good; Similarly just because a project hasn’t been downloaded a lot doesn’t mean it’s bad!
+
+In short, because its value is low for various reasons, and the tradeoffs required to make it work are high, it has been not an effective use of limited resources.
