@@ -1,5 +1,17 @@
-dfaagargadrg
-sedgws<efgaw
-sddgwfw
-sefgwefq
+
+SELECT
+  h.zulieferer,
+  p.produkt
+FROM
+  hersteller h
+LEFT JOIN
+  produkt p ON (h.id = p.hs_link)
+UNION
+  SELECT
+    h.zulieferer,
+    p.produkt
+  FROM
+    hersteller h
+  RIGHT JOIN
+    produkt p ON (h.id = p.hs_link);
 
